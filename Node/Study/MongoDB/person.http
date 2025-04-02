@@ -1,0 +1,26 @@
+@server = http://localhost:3000
+
+### 모든 사용자 조회
+GET {{server}}/person
+Content-Type: application/json
+
+### 새로운 사용자 생성
+POST {{server}}/person
+Content-Type: application/json
+
+{
+    "name": "홍길동",
+    "email": "hong@example.com",
+    "age": 20
+}
+
+### 특정 사용자 정보 수정
+PUT {{server}}/person/hong@example.com
+Content-Type: application/json
+
+{
+    "age": 23
+}
+
+### 특정 사용자 삭제
+DELETE {{server}}/person/hong@example.com
