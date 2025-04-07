@@ -7,4 +7,3 @@ module.exports = {
     eq : (val1, val2) => val1 === val2,
     //3. ISO 날짜 문자열에서 날짜만 반환 
     }
-}
