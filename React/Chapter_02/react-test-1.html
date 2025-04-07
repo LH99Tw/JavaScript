@@ -1,0 +1,38 @@
+<!--
+리액트를 사용하기 위한 설정 없이 HTML 페이지에 3개의 JS CDN 파일을 배치하고
+리액트 스크립트 작성
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="mydiv"></div>
+    <script type="text/babel">
+
+      function MyReact() {
+        return (
+          <div>
+            컴퓨터에 리액트 환경을 설정하지 않고
+            <br />
+            <span style={{ fontWeight: "bold", color: "orange" }}>
+              3개의 JS CDN 파일을 배치하고
+              <br />
+            </span>
+            <br />
+            즉시 리액트를 테스트 해볼 수 있습니다.
+          </div>
+        );
+      }
+
+      const container = document.getElementById("mydiv");
+      const root = ReactDOM.createRoot(container); // 컴포넌트 위치
+      root.render(<MyReact />); // 컴포넌트 렌더링
+    </script>
+  </body>
+</html>
